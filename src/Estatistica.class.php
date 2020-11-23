@@ -758,4 +758,159 @@ class Estatistica
         return $escore;
     }
     
+    /*
+     * Três desvios abaixo e acima da média
+     * 
+     * @param array [x¹, x², x³, ...]
+     *        bool
+     * 
+     * @return array
+     */
+    public function tresDesvios(array $dados, bool $pop = true): array
+    {
+        $media = $this->mediaAritmetica($dados);
+        if ($pop) {
+            $desvio = $this->desvioPadraoPopulacionalNaoAgrupado($dados);
+        } else {
+            $desvio = $this->desvioPadraoAmostralNaoAgrupado($dados);
+        }
+        $tresdesvios = array('-3' => $media - (3 * $desvio),
+                             '-2' => $media - (2 * $desvio),
+                             '-1' => $media - $desvio,
+                             '+1' => $media + $desvio,
+                             '+2' => $media + (2 * $desvio),
+                             '+3' => $media + (3 * $desvio));
+        return $tresdesvios;
+    }
+    
+    /*
+     * Amplitude
+     * 
+     * @param array [x¹, x², x³, ...] ou [[w¹,x¹], [w²,x²], [w³,x³], ...]
+     * 
+     * @return float
+     */
+    public function amplitude(array $dados): float
+    {
+        //if (count($dados) != count($dados, COUNT_RECURSIVE)) {
+        if (is_array($dados[0])) {
+            $dados = $this->desagruparDados($dados);
+            sort($dados);
+        } else {
+            sort($dados);
+        }
+        $n = count($dados);
+        $amplitude = $dados[$n-1] - $dados[0];
+        return $amplitude;
+    }
+    
+    /*
+     * Converte dados agrupados para dados não agrupados
+     * 
+     * @param array [[w¹,x¹], [w²,x²], [w³,x³], ...]
+     * 
+     * @return array [x¹, x², x³, ...]
+     */
+    public function desagruparDados(array $dados): array
+    {
+        $dadosdesagrupados = array();
+        foreach ($dados as $i) {
+            $w = $i[0];
+            $x = $i[1];
+            for ($i=1; $i<=$w; $i++) {
+                $dadosdesagrupados[] = $x;
+            }
+        }
+        return $dadosdesagrupados;
+    }
+    
+    /*
+     * Converte dados não agrupados para dados agrupados
+     * 
+     * @param array [x¹, x², x³, ...]
+     * 
+     * @return array [[w¹,x¹], [w²,x²], [w³,x³], ...]
+     */
+    public function agruparDados(array $dados): array
+    {
+        $dadosagrupados = array();
+        sort($dados);
+        $n = count($dados);
+        for ($i=0; $i<$n; $i++) {
+            $x = $dados[$i];
+            $w = 1;
+            for ($j=$i+1; $j<$n; $j++) {
+                if ($x == $dados[$j]) {
+                    $w = $w + 1;
+                } else {
+                    break;
+                }
+            }
+            $dadosagrupados[] = array($w, $x);
+            $i = $j - 1;
+        }
+        return $dadosagrupados;
+    }
+    
+    /*
+     * Quartis
+     * 
+     * @param array [x¹, x², x³, ...]
+     * 
+     * @return array
+     */
+    public function quartis(array $dados): array
+    {
+        $quartis = array();
+        sort($dados);
+        $n = count($dados);
+        for ($j=1; $j<=3; $j++) {
+            $k = ($j * ($n + 1)) / 4;
+            $i = floor($k);
+            $q = $dados[$i-1] + (($k - $i) * ($dados[$i] - $dados[$i-1]));
+            $quartis[$j] = $q;
+        }
+        return $quartis;
+    }
+    
+    /*
+     * Curtose
+     * 
+     * @param array [x¹, x², x³, ...]
+     * 
+     * @return float
+     */
+    public function curtose(array $dados): float
+    {
+        $somatorio = 0;
+        $n = count($dados);
+        $media = $this->mediaAritmetica($dados);
+        $desvio = $this->desvioPadraoAmostralNaoAgrupado($dados);
+        foreach ($dados as $x) {
+            $somatorio = $somatorio + pow(($x - $media) / $desvio, 4);
+        }
+        $curtose = ($somatorio / $n) - 3;
+        return $curtose;
+    }
+    
+    /*
+     * Assimetria
+     * 
+     * @param array [x¹, x², x³, ...]
+     * 
+     * @return float
+     */
+    public function assimetria(array $dados): float
+    {
+        $somatorio = 0;
+        $n = count($dados);
+        $media = $this->mediaAritmetica($dados);
+        $desvio = $this->desvioPadraoAmostralNaoAgrupado($dados);
+        foreach ($dados as $x) {
+            $somatorio = $somatorio + pow(($x - $media) / $desvio, 3);
+        }
+        $assimetria = $somatorio / $n;
+        return $assimetria;
+    }
+    
 }
