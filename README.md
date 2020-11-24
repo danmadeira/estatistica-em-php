@@ -18,6 +18,8 @@ Até o momento, estas são algumas das fórmulas estatísticas que estão implem
 
 ![Dispersao4](img/dispersao4.png?raw=true)
 
+![Dispersao5](img/dispersao5.png?raw=true)
+
 Obs.: As funções possuem versões para dados agrupados ou não agrupados e para dados amostrais ou populacionais. Esta classe não utiliza a extensão PECL "stats" pois a ideia é demonstrar os algoritmos.
 
 ### Referências:
@@ -28,7 +30,7 @@ Obs.: As funções possuem versões para dados agrupados ou não agrupados e par
 
 - ANDERSON, D. R.; SWEENEY, D. J.; WILLIAMS, T. A. *Statistics for Business and Economics*, 11th Edition. South-Western, Cengage Learning, 2011.
 
-- BLUMAN, A. G. *Elementary Statistics: A Step By Step Approach*, 8th Edition. McGraw-Hill, 2012.
+- BLUMAN, A. G. *Elementary Statistics: A Step By Step Approach*, 10th Edition. McGraw-Hill, 2018.
 
 - BONAMENTE, M. *Statistics and Analysis of Scientific Data*, 2nd Edition. Springer Science Business Media, 2017.
 
@@ -37,6 +39,8 @@ Obs.: As funções possuem versões para dados agrupados ou não agrupados e par
 - BRUCE, P.; BRUCE, A.; GEDECK, P. *Practical Statistics for Data Scientists*, 2nd Edition. O'Reilly Media, 2020.
 
 - DANGETI, P. *Statistics for Machine Learning*. Packt Publishing, 2017.
+
+- DEVORE, J. L. *Probability and Statistics for Engineering and the Sciences*, 9th Edition. Cengage Learning, 2016.
 
 - EMC Education Services. *Data Science & Big Data Analytics: Discovering, Analyzing, Visualizing and Presenting Data*. John Wiley & Sons, 2015.
 
@@ -56,6 +60,8 @@ Obs.: As funções possuem versões para dados agrupados ou não agrupados e par
 
 - MENDENHALL, W.; BEAVER, R. J.; BEAVER, B. M. *Introduction to Probability and Statistics*, 13th Edition. Brooks/Cole, Cengage Learning, 2009.
 
+- MENDENHALL, W. M.; SINCICH, T. L. *Statistics for Engineering and the Sciences*, 6th Edition. CRC Press, Taylor & Francis Group, 2016.
+
 - MONTGOMERY, D. C.; RUNGER, G. C. *Applied Statistics and Probability for Engineers*, 3rd Edition. John Wiley & Sons, 2003.
 
 - NISBET, R.; MINER, G.; YALE, K. *Handbook of Statistical Analysis and Data Mining Applications*, 2nd Edition. Academic Press, Elsevier, 2018.
@@ -72,7 +78,9 @@ Obs.: As funções possuem versões para dados agrupados ou não agrupados e par
 
 - SKIENA, S. S. *The Data Science Design Manual*. Texts in Computer Science. Springer International Publishing, 2017.
 
-- SPIEGEL, M. R; STEPHENS, L. J. *Theory and Problems of Statistics*, 4th Edition. Schaum's Outline Series, McGraw-Hill, 2008.
+- SPIEGEL, M. R.; STEPHENS, L. J. *Schaum's Outline of Statistics*, 6th Edition. McGraw-Hill Education, 2018.
+
+- WALPOLE, R. E.; MYERS, R. H.; MYERS, S. L.; YE, K. *Probability & Statistics for Engineers & Scientists*, 9th Edition, Global Edition. Pearson Education Limited, 2016.
 
 - WEIERS, R. M. *Introduction to Business Statistics*, 6th Edition. Thomson South-Western, 2008.
 
