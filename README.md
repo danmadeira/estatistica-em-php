@@ -52,6 +52,8 @@ Obs.: As funções possuem versões para dados agrupados ou não agrupados e par
 
 - HEUMANN, C.; SCHOMAKER, M.; SHALABH. *Introduction to Statistics and Data Analysis*. Springer International Publishing Switzerland, 2016.
 
+- HOGG, R. V.; MCKEAN, J. W.; CRAIG, A. T. *Introduction to Mathematical Statistics*, 8th Edition. Pearson Education, 2019.
+
 - JOHNSON, R.; KUBY, P. *Elementary Statistics*, 11th edition. Brooks/Cole, Cengage Learning, 2012.
 
 - KOTZ, S.; READ, C. B.; BALAKRISHNAN, N.; VIDAKOVIC, B. *Encyclopedia of Statistical Sciences*, 2nd Edition, Vol 1-16. John Wiley & Sons, 2005.
@@ -73,6 +75,8 @@ Obs.: As funções possuem versões para dados agrupados ou não agrupados e par
 - PECK, R.; OLSEN, C.; DEVORE, J. L. *Introduction to Statistics and Data Analysis*, 4th Edition. Brooks/Cole, Cengage Learning, 2012.
 
 - PROVOST, F.; FAWCETT, T. *Data Science for Business*, 1st Edition. O'Reilly Media, 2013.
+
+- RASCH, D.; SCHOTT, D. *Mathematical Statistics*. John Wiley & Sons, 2018.
 
 - SALKIND, N. J. *Encyclopedia of Measurement and Statistics*, Vol 1-3. SAGE Publications, 2007.
 
